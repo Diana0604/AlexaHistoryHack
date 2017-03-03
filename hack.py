@@ -8,7 +8,7 @@ response.close() # its always safe to close an open connection
 
 print page
 # while loop to refresh the html
-
+print 'Hello world'
 import time 
 while True:
 	response = urllib2.urlopen(req)
