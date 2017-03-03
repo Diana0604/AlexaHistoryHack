@@ -20,4 +20,3 @@ while True:
 		print "not equal"
 	page = page1
 	time.sleep(5)
-
