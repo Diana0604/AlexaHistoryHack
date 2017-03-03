@@ -38,9 +38,6 @@ class History :
 		
 		#per trobar on esta el proper Today
 		while(self.Today(i) == False): 
-			#if(self.Debug == 1):
-				#print(self.page[i])
-				#print i
 			i = i + 1;
 		
 		command = []; 
@@ -51,7 +48,7 @@ class History :
 		self.startReading = i; 
 		
 		command = ''.join(command)
-		print command
+		if(self.Debug == 1) print command
 		return command
 		
 	#def findNewCommands(self, newHistory) : #aixo sera lo bo pero per ara per fer proves faig aixi cutres
