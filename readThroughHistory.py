@@ -21,16 +21,17 @@ class History :
 		req = urllib2.Request('http://alexa.amazon.co.uk/spa/index.html#settings/dialogs', None, headers)
 		response = urllib2.urlopen(req)
 		self.page = response.read()
+		#print(self.page)
 		response.close() # its always safe to close an open connection
 		
 		#return self.page; 
 		
 	def Today(self,i):
-		if(self.page[i] != 'A'): return False; 
-		if(self.page[i+1] != 'l'): return False; 
-		if(self.page[i+2] != 'e'): return False; 
-		if(self.page[i+3] != 'x'): return False; 
-		if(self.page[i+4] != 'a'): return False; 
+		if(self.page[i] != 's'): return False; 
+		if(self.page[i+1] != 'i'): return False; 
+		if(self.page[i+2] != 'm'): return False; 
+		if(self.page[i+3] != 'o'): return False; 
+		if(self.page[i+4] != 'n'): return False; 
 		return True
 			
 	
@@ -48,7 +49,7 @@ class History :
 		self.startReading = i; 
 		
 		command = ''.join(command)
-		if(self.Debug == 1) print command
+		if(self.Debug == 1): print command
 		return command
 		
 	#def findNewCommands(self, newHistory) : #aixo sera lo bo pero per ara per fer proves faig aixi cutres
@@ -58,6 +59,7 @@ class History :
 		newCommands = False; 
 		while newCommands == False : 
 			self.nextCommand = self.findNextCommand(self.startReading) #Todo anar fent
+			
 			
 		
 			
